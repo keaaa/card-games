@@ -67,6 +67,9 @@ night-script lines. No player identities are assigned or recorded.
 The Jukselapp uses a compact selector and puts voting, mission cards and winning
 before the role reference. Roles are grouped by team with short abilities and
 identifying card ranges; there is no faction filter or personal role selection.
+Screen-only styling adds a slim navy-and-gold title, numbered action badges,
+labelled mission-card shapes and subtle faction accents without a large hero.
+Prints retain the plain layout and all text labels.
 The secret role card reminder and level-specific exceptions remain visible.
 Setup advice and the full dealing list stay in the moderator guide, linked from
 the player rules and Jukselapp rather than repeated above their content.

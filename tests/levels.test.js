@@ -123,6 +123,10 @@ test("cheat sheet puts actions before roles and preserves critical reminders", a
   assert.match(html, /oppdrag 4 to svarte/);
   assert.match(html, /null eller ett betyr suksess/);
   assert.match(html, /href="moderator.html#klargjoring"/);
+  assert.match(html, /class="cheatsheet-title"/);
+  assert.deepEqual([...html.matchAll(/class="action-number">(\d)\.<\/span>/g)].map((match) => match[1]), ["1", "2", "3"]);
+  assert.match(html, /R&oslash;dt = suksess/);
+  assert.match(html, /Svart = sabotasje/);
 });
 
 test("player rules teach before setup and moderator phases follow play order", async () => {

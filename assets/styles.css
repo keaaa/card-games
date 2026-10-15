@@ -234,6 +234,21 @@ noscript p { padding: 1rem; background: #f8eedc; }
 .cheatsheet .role-card p { font-size: 1rem; }
 .compact-reminders { margin: 0 0 1rem; }
 @media screen {
+  .cheatsheet .cheatsheet-title { background: var(--navy); color: var(--surface); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: .45rem .65rem; font-size: 1.25rem; }
+  .cheatsheet-title span { color: var(--gold); }
+  .cheatsheet .difficulty { margin-bottom: .25rem; }
+  .cheatsheet .quick-action { padding: .65rem 0; }
+  .cheatsheet .action-number { display: inline-flex; align-items: center; justify-content: center; min-width: 1.45rem; height: 1.45rem; margin-right: .25rem; background: var(--navy); color: var(--gold); border-radius: 50%; font-size: .85rem; vertical-align: text-bottom; }
+  .cheatsheet .mission-colors { gap: .35rem; }
+  .cheatsheet .mission-colors p { display: flex; align-items: center; gap: .35rem; border: 1px solid #e6c9c8; padding: .3rem .4rem; font-size: .85rem; }
+  .cheatsheet .mission-colors .saboteur-panel { border-color: #cfd7dc; }
+  .cheatsheet .mission-colors p::before { content: ""; flex: 0 0 11px; height: 17px; border: 1px solid #fffefa; border-radius: 2px; background: var(--red); box-shadow: 0 0 0 1px var(--red); }
+  .cheatsheet .mission-colors .saboteur-panel::before { background: #202a30; box-shadow: 0 0 0 1px #202a30; }
+  .cheatsheet .role-teams > section { border-left: 3px solid #e6c9c8; padding-left: .75rem; }
+  .cheatsheet .role-teams > section:has([data-faction="saboteur"]) { border-left-color: #cfd7dc; }
+  .cheatsheet .role-teams > section > h3 { display: block; background: var(--red-soft); border-radius: 5px; padding: .35rem .5rem; margin-top: 0; }
+  .cheatsheet .role-teams .saboteur { background: var(--black-soft); }
+  .cheatsheet .role-card .role-rank { color: var(--teal); }
   .player-intro { display: grid; grid-template-columns: minmax(0, 1fr) 140px; align-items: center; gap: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius); border: 1px solid var(--navy); background: radial-gradient(ellipse at 100% 100%, #2c6259, transparent 70%), var(--navy); color: var(--surface); }
   .player-intro .eyebrow { color: var(--gold); font-size: .7rem; margin-bottom: .5rem; }
   .player-intro h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: .5rem; }
