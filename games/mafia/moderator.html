@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moderatorens hefte for Mytteri!: balansering for 5 til 20 spillere, oppdragsoversikt og komplett nattmanus.">
+  <meta name="theme-color" content="#183c48">
+  <title>Moderator - Mytteri! | Kortbordet</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script type="module" src="../../assets/site.js"></script>
+  <script type="module" src="mafia.js"></script>
+</head>
+<body class="guide" data-page="moderator">
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">K</span> Kortbordet</a>
+    <a class="header-link" href="../../index.html">Alle spill</a>
+  </div></header>
+  <main class="container" id="main">
+    <nav class="game-nav" aria-label="Mytteri!">
+      <a href="index.html">Spiller &amp; regler</a>
+      <a href="moderator.html" aria-current="page">Moderator</a>
+      <a href="jukselapp.html">Jukselapp</a>
+    </nav>
+    <header class="guide-heading">
+      <h1>Mytteri! / Moderator</h1>
+      <p>Du deler ikke ut kort til deg selv. Klargj&oslash;r spillet, les nattmanuset og led oppdragene.</p>
+    </header>
+    <section class="difficulty" data-difficulty hidden></section>
+    <nav class="section-nav moderator-phases" aria-label="I moderatorens hefte">
+      <a href="#klargjoring">1. Forbered</a><a href="#natt">2. Natt</a><a href="#dag">3. Dag &amp; slutt</a>
+    </nav>
+    <noscript><p>Niv&aring;velgeren krever JavaScript. Dette er et ufiltrert referansehefte: bruk bare linjene for niv&aring;et dere har avtalt. Niv&aring; 1: vanlige roller. Niv&aring; 2: legg til Admiralen og Mytterilederen. Niv&aring; 3: legg til Livvakten, Blindpassasjeren, den falske admiralen og innsyn. Niv&aring; 4: alle spesialroller.</p></noscript>
+    <section class="section" id="klargjoring">
+      <h2>1. Forbered spillet</h2>
+      <div data-loadout-container></div>
+      <ol class="preparation-list">
+        <li><strong>Tell og del ut rollekortene:</strong> ett hemmelig kort per spiller. Ruter = lojal, Spar = mytterist. Forklar <a href="jukselapp.html#roller">niv&aring;ets roller</a> f&oslash;r utdeling.</li>
+        <li><strong>Finn frem oppdragskort:</strong> ett r&oslash;dt og ett svart kort per deltaker p&aring; oppdrag. Bruk ekstra kortstokker eller lapper med like baksider. Rollekortene skal aldri spilles; ubrukte oppdragskort holdes skjult.</li>
+        <li><strong>Velg f&oslash;rste kaptein.</strong> <span data-feature="inspection">P&aring; niv&aring; 3&ndash;4 f&aring;r spilleren til h&oslash;yre innsynskortet. Noter alle innehavere, ogs&aring; den f&oslash;rste.</span></li>
+        <li><strong>Klargj&oslash;r poeng og avslagsteller.</strong> <span data-feature="finale">P&aring; niv&aring; 2&ndash;4 trenger du ogs&aring; en klokke til finalens to minutter.</span> Send spillerne til <a href="jukselapp.html">jukselappen</a>.</li>
+      </ol>
+    </section>
+
+    <section class="section" id="natt">
+      <h2>2. Led den f&oslash;rste natten</h2>
+      <p class="section-intro">Les sitatene rolig og tydelig. Med niv&aring;velgeren vises bare linjene dere skal bruke. Teksten under sitatene er instruksjoner til deg. Nattfasen gjennomf&oslash;res f&oslash;r det f&oslash;rste oppdraget, ikke mellom hvert oppdrag.</p>
+      <ol class="night-script">
+        <li><h3>Alle sovner</h3><blockquote>&laquo;Da senker natten seg over skipet. Alle lukker &oslash;ynene og legger hodet ned p&aring; bordet. Ingen smugtitting, og sitt helt stille.&raquo;</blockquote><p class="stage-direction">Vent til det er helt stille i rommet.</p></li>
+        <li><h3>Mytteristene finner hverandre</h3><blockquote>&laquo;<span data-feature="blind">Enst&oslash;ingen skal holde &oslash;ynene lukket. </span>Mytteristene<span data-feature="blind">, unntatt Enst&oslash;ingen</span> &ndash; &aring;pne &oslash;ynene deres. L&oslash;ft hodet forsiktig, se p&aring; hverandre, og merk dere hvem som er p&aring; laget deres.&raquo;</blockquote><p class="stage-direction">Vent 5 sekunder.</p><blockquote>&laquo;Mytterister, lukk &oslash;ynene igjen. Legg hodet ned p&aring; bordet.&raquo;</blockquote><p class="stage-direction">Vent 2 sekunder.</p></li>
+        <li data-feature="commander"><h3>Admiralen ser etter mytterister / niv&aring; 2&ndash;4</h3><blockquote>&laquo;N&aring; skal alle mytteristene strekke ut en h&aring;nd og vise en tydelig tommel opp i lufta. <span data-feature="deceiver">Blindpassasjeren skal holde h&aring;nden helt flatt p&aring; bordet og IKKE vise tommel.</span>&raquo;</blockquote><p class="stage-direction"><span data-feature="blind">Enst&oslash;ingen viser tommel. </span>Sjekk at de riktige tomlene er oppe.</p><blockquote>&laquo;Admiralen &ndash; &aring;pne &oslash;ynene dine n&aring;. Se deg rundt bordet. Tomlene du ser i lufta n&aring;, er mytteristene du m&aring; stoppe. <span data-feature="deceiver">Husk at Blindpassasjeren kan gjemme seg.</span>&raquo;</blockquote><p class="stage-direction">Vent 5 sekunder.</p><blockquote>&laquo;Admiralen, lukk &oslash;ynene dine igjen. Mytterister, ta ned tomlene deres.&raquo;</blockquote><p class="stage-direction">Vent 2 sekunder.</p></li>
+        <li data-feature="security"><h3>Livvakten leter etter Admiralen / niv&aring; 3&ndash;4</h3><blockquote>&laquo;Admiralen &ndash; hold &oslash;ynene dine lukket, men strekk ut en tydelig tommel opp i lufta. Den falske admiralen skal OGS&Aring; strekke opp en tommel n&aring;!&raquo;</blockquote><p class="stage-direction">Sjekk at begge tomlene er oppe.</p><blockquote>&laquo;Livvakten &ndash; &aring;pne &oslash;ynene dine. Se p&aring; de to tomlene i lufta. Du skal beskytte Admiralen i dag. &Eacute;n er Admiralen og den andre er den falske admiralen. Du vet ikke hvem som er hvem.&raquo;</blockquote><p class="stage-direction">Vent 4 sekunder.</p><blockquote>&laquo;Livvakten, lukk &oslash;ynene dine. Alle tar ned tomlene sine.&raquo;</blockquote><p class="stage-direction">Vent 2 sekunder.</p></li>
+        <li data-feature="lovers"><h3>Skipskameratene finner hverandre / niv&aring; 4</h3><blockquote>&laquo;Skipskameratene &ndash; &aring;pne &oslash;ynene deres og se p&aring; hverandre. Dere er begge lojale og kan stole p&aring; hverandre.&raquo;</blockquote><p class="stage-direction">Vent 3 sekunder.</p><blockquote>&laquo;Skipskameratene, lukk &oslash;ynene igjen.&raquo;</blockquote><p class="stage-direction">Vent 3 sekunder.</p></li>
+        <li><h3>En ny morgen</h3><blockquote>&laquo;Da kan alle &aring;pne &oslash;ynene! Morgenen har grytt, og spillet er i gang!&raquo;</blockquote></li>
+      </ol>
+    </section>
+
+    <section class="section" id="dag">
+      <h2>3. Led oppdragene</h2>
+      <div class="panel mission-overview" id="oppsett">
+        <h3>Mannskap / 11 spillere</h3>
+        <p class="mission-sequence"><strong>4 / 5 / 4 / 6* / 6</strong> spillere p&aring; oppdrag 1&ndash;5.</p>
+        <p><strong>* Oppdrag 4 krever minst 2 svarte kort for &aring; feile.</strong> Null eller ett betyr suksess. Ellers holder 1 svart kort.</p>
+      </div>
+      <div class="two-column">
+        <div class="panel"><h3>Hvert oppdrag</h3><ol>
+          <li><strong>Velg:</strong> Sjekk mannskapsst&oslash;rrelsen over. Kapteinen l&aring;ser forslaget etter diskusjon.</li>
+          <li>Tell: &laquo;&Eacute;n, to, tre &ndash; STEM!&raquo; Bare flertall JA godkjenner laget. Uavgjort = NEI.</li>
+          <li>Ved avvisning: tell ett avslag. Ved fem avslag feiler oppdraget automatisk. Ellers flytter du kapteinen til venstre for et nytt forslag.</li>
+          <li><strong>Spill og avsl&oslash;r:</strong> Del ut oppdragskort. Stokk innleverte kort skjult, snu dem og tell svarte kort.</li>
+          <li>Gi ett poeng. Sjekk om et lag har tre poeng <strong>f&oslash;r</strong> <span data-feature="inspection">mer innsyn eller </span>et nytt oppdrag.</li>
+          <li>Hvis spillet fortsetter: <span data-feature="inspection">p&aring; niv&aring; 3&ndash;4 brukes innsynskortet etter oppdrag 1, 2 og 3, ogs&aring; etter automatisk feil. </span>Flytt kapteinen til venstre og nullstill avslagstelleren.</li>
+        </ol></div>
+        <div>
+          <div class="panel" data-feature="inspection"><h3>Innsyn / niv&aring; 3&ndash;4</h3><p>Bare innehaveren f&aring;r se den valgte spillerens lagfarge: r&oslash;dt = lojal, svart = mytterist. Skjul rang og symboler, eller bruk et eget lagkort. Noter hver innehaver, inkludert den f&oslash;rste. Ingen tidligere innehaver kan sjekkes.</p><p>Innehaveren forteller hva hen s&aring;. Mytterister kan lyve. Den sjekkede overtar kortet. Innsyn viser ekte lagfarge, ogs&aring; for Blindpassasjeren<span data-feature="lancelot"> og V&aring;ghalsen</span>.</p></div>
+          <div class="callout warning"><h3>Seier &amp; slutt</h3><p><strong>3 poeng til mytteristene:</strong> Stopp. Mytteristene vinner.</p><p data-feature="basic"><strong>3 lojale poeng p&aring; niv&aring; 1:</strong> Stopp. De lojale vinner umiddelbart, uten en finale.</p><div data-feature="finale"><p><strong>3 lojale poeng p&aring; niv&aring; 2&ndash;4:</strong> Gi mytteristene 2 minutter til &aring; diskutere &aring;pent. Mytterilederen (Spar Konge) velger &eacute;n mulig Admiral (Ruter Konge). Riktig gjetning gir mytteristseier; feil gir lojal seier.</p><p>Hold Admiralens identitet skjult frem til gjetningen.</p></div></div>
+        </div>
+      </div>
+    </section>
+    <details open data-balance-details id="referanse" class="section">
+      <summary>Andre spillerantall / tabellreferanse for 5&ndash;20</summary>
+      <p>Dette er en separat referanse. Niv&aring;enes kortlister og nattmanus gjelder <strong>11 spillere + moderator</strong> og endres ikke av tabellvalget.</p>
+      <div class="setup" data-setup hidden>
+        <div>
+          <label for="player-count">Spillerantall i tabellreferansen</label>
+          <select id="player-count" aria-describedby="count-hint">
+            <option value="5">5 spillere</option><option value="6">6 spillere</option><option value="7">7 spillere</option><option value="8">8 spillere</option>
+            <option value="9">9 spillere</option><option value="10">10 spillere</option><option value="11" selected>11 spillere</option><option value="12">12 spillere</option>
+            <option value="13">13 spillere</option><option value="14">14 spillere</option><option value="15">15 spillere</option><option value="16">16 spillere</option>
+            <option value="17">17 spillere</option><option value="18">18 spillere</option><option value="19">19 spillere</option><option value="20">20 spillere</option>
+          </select>
+          <p class="small" id="count-hint">Moderatoren kommer i tillegg.</p>
+        </div>
+        <div aria-live="polite" aria-atomic="true" id="setup-result"></div>
+      </div>
+      <p class="callout warning" data-reference-warning hidden>Kun tabellreferanse: kortlisten og nattmanuset gjelder fortsatt 11 spillere. Ikke bruk dem som ferdig oppsett for dette spillerantallet.</p>
+      <p class="small"><strong>* = minst 2 svarte kort</strong> for &aring; feile; ellers holder 1. Ved * lykkes oppdraget med 0 eller 1 svart kort.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Balanseringstabell, rull sidelengs ved behov">
+        <table id="balance-table">
+          <caption>Antall spillere p&aring; hvert lag og hvert oppdrag. Moderator er ikke inkludert.</caption>
+          <thead><tr><th scope="col">Spillere</th><th scope="col">R&oslash;de<br>De lojale</th><th scope="col">Svarte<br>Mytteristene</th><th scope="col">Oppdrag 1</th><th scope="col">Oppdrag 2</th><th scope="col">Oppdrag 3</th><th scope="col">Oppdrag 4</th><th scope="col">Oppdrag 5</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">5</th><td>3</td><td>2</td><td>2</td><td>3</td><td>2</td><td>3</td><td>3</td></tr>
+            <tr><th scope="row">6</th><td>4</td><td>2</td><td>2</td><td>3</td><td>4</td><td>3</td><td>4</td></tr>
+            <tr><th scope="row">7</th><td>4</td><td>3</td><td>2</td><td>3</td><td>3</td><td>4*</td><td>4</td></tr>
+            <tr><th scope="row">8</th><td>5</td><td>3</td><td>3</td><td>4</td><td>4</td><td>5*</td><td>5</td></tr>
+            <tr><th scope="row">9</th><td>6</td><td>3</td><td>3</td><td>4</td><td>4</td><td>5*</td><td>5</td></tr>
+            <tr><th scope="row">10</th><td>6</td><td>4</td><td>3</td><td>4</td><td>4</td><td>5*</td><td>5</td></tr>
+            <tr><th scope="row">11</th><td>7</td><td>4</td><td>4</td><td>5</td><td>4</td><td>6*</td><td>6</td></tr>
+            <tr><th scope="row">12</th><td>8</td><td>4</td><td>4</td><td>5</td><td>5</td><td>6*</td><td>6</td></tr>
+            <tr><th scope="row">13</th><td>9</td><td>4</td><td>4</td><td>5</td><td>5</td><td>6*</td><td>7</td></tr>
+            <tr><th scope="row">14</th><td>9</td><td>5</td><td>4</td><td>6</td><td>5</td><td>7*</td><td>7</td></tr>
+            <tr><th scope="row">15</th><td>10</td><td>5</td><td>5</td><td>6</td><td>6</td><td>7*</td><td>8</td></tr>
+            <tr><th scope="row">16</th><td>11</td><td>5</td><td>5</td><td>6</td><td>6</td><td>8*</td><td>8</td></tr>
+            <tr><th scope="row">17</th><td>11</td><td>6</td><td>5</td><td>7</td><td>7</td><td>8*</td><td>9</td></tr>
+            <tr><th scope="row">18</th><td>12</td><td>6</td><td>5</td><td>7</td><td>7</td><td>9*</td><td>9</td></tr>
+            <tr><th scope="row">19</th><td>13</td><td>6</td><td>6</td><td>8</td><td>7</td><td>9*</td><td>10</td></tr>
+            <tr><th scope="row">20</th><td>13</td><td>7</td><td>6</td><td>8</td><td>8</td><td>10*</td><td>10*</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <div class="actions"><a class="button" href="jukselapp.html">Spillernes jukselapp</a><button class="button" type="button" data-print hidden>Skriv ut heftet</button></div>
+  </main>
+  <footer class="site-footer"><a href="../../index.html">Kortbordet / alle spill</a><span>Mytteri! / moderatorens hefte</span></footer>
+</body>
+</html>

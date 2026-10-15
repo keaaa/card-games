@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kort jukselapp til Mytteri!: stem, velg oppdragskort og finn rollen din. Tilpasset valgt niv&aring;, mobil og utskrift.">
+  <meta name="theme-color" content="#183c48">
+  <title>Jukselapp - Mytteri! | Kortbordet</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script type="module" src="../../assets/site.js"></script>
+  <script type="module" src="difficulty.js"></script>
+</head>
+<body class="cheatsheet" data-page="cheatsheet">
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">K</span> Kortbordet</a>
+    <a class="header-link" href="../../index.html">Alle spill</a>
+  </div></header>
+  <main class="container" id="main">
+    <nav class="game-nav" aria-label="Mytteri!">
+      <a href="index.html">Spiller &amp; regler</a>
+      <a href="moderator.html">Moderator</a>
+      <a href="jukselapp.html" aria-current="page">Jukselapp</a>
+    </nav>
+    <h1>Mytteri! / Jukselapp</h1>
+    <section class="difficulty" data-difficulty hidden></section>
+    <noscript><p>JavaScript er av: alle roller vises. Niv&aring; 1 bruker bare vanlige roller; finale gjelder niv&aring; 2&ndash;4, innsyn niv&aring; 3&ndash;4 og V&aring;ghalsen bare niv&aring; 4.</p></noscript>
+
+    <section class="quick-action" id="hurtig" aria-labelledby="vote-title">
+      <h2 id="vote-title">1. Stem p&aring; mannskapet</h2>
+      <p><strong>Tommel opp = JA. Tommel ned = NEI.</strong><br>Alle stemmer samtidig. Flertall JA godkjenner laget; uavgjort betyr NEI.</p>
+    </section>
+    <section class="quick-action" id="oppdragskort" aria-labelledby="mission-title">
+      <h2 id="mission-title">2. Velg et oppdragskort</h2>
+      <div class="mission-colors">
+        <p class="loyal-panel"><strong>R&oslash;dt = suksess</strong></p>
+        <p class="saboteur-panel"><strong>Svart = sabotasje</strong></p>
+      </div>
+      <p><strong>Lojal:</strong> spill r&oslash;dt. <strong>Mytterist:</strong> velg fritt.<br>Legg ett kort med baksiden opp. Skjul det andre.</p>
+      <p data-feature="lancelot"><strong>Niv&aring; 4:</strong> V&aring;ghalsen er lojal, men kan spille svart og skade eget lag.</p>
+      <p class="secret-reminder"><strong>Ikke spill rollekortet!</strong> Det er hemmelig: Ruter = lojal, Spar = mytterist.</p>
+    </section>
+    <section class="quick-action" id="seier" aria-labelledby="win-title">
+      <h2 id="win-title">3. F&oslash;rst til tre</h2>
+      <p><strong>3 mislykkede oppdrag:</strong> mytteristene vinner.</p>
+      <p data-feature="basic"><strong>Niv&aring; 1 / 3 vellykkede oppdrag:</strong> de lojale vinner straks.</p>
+      <p data-feature="finale"><strong>Niv&aring; 2&ndash;4 / 3 vellykkede oppdrag:</strong> Mytteristene diskuterer &aring;pent i 2 minutter. Mytterilederen gjetter hvem Admiralen er. Riktig = mytteristseier; feil = lojal seier. Hold Admiralen hemmelig til valget er tatt.</p>
+    </section>
+
+    <section class="section" id="roller" aria-labelledby="roles-title">
+      <h2 id="roles-title">Roller i dette niv&aring;et</h2>
+      <div class="two-column role-teams">
+        <section aria-labelledby="loyal-title">
+          <h3 id="loyal-title" class="faction loyal">De lojale / Ruter</h3>
+          <article class="role-card" data-faction="loyal" data-role="loyal">
+            <h3>Lojal sj&oslash;mann</h3><p class="role-rank">Ruter Ess til 7</p><p>Ingen nattkrefter; spill alltid r&oslash;dt.</p>
+          </article>
+          <article class="role-card" data-faction="loyal" data-role="commander">
+            <h3>Admiralen</h3><p class="role-rank">Ruter Konge</p><p>Ser mytteristene om natten<span data-feature="deceiver">, <strong>unntatt Blindpassasjeren</strong> (niv&aring; 3&ndash;4)</span>; hold identiteten hemmelig.</p>
+          </article>
+          <article class="role-card" data-faction="loyal" data-role="security">
+            <h3>Livvakten</h3><p class="role-rank">Ruter Dame</p><p>Ser <strong>to kandidater</strong>: Admiralen og den falske admiralen, uten &aring; vite hvem som er hvem.</p>
+          </article>
+          <article class="role-card" data-faction="loyal" data-role="lovers">
+            <h3>Skipskameratene</h3><p class="role-rank">Ruter 8 og 9</p><p>Ser hverandre om natten og vet at begge er lojale.</p>
+          </article>
+          <article class="role-card" data-faction="loyal" data-role="lancelot">
+            <h3>V&aring;ghalsen</h3><p class="role-rank">Ruter Knekt</p><p>Er lojal, men <strong>kan spille svart sabotasje</strong> som kan koste eget lag poeng.</p>
+          </article>
+        </section>
+        <section aria-labelledby="mutineer-title">
+          <h3 id="mutineer-title" class="faction saboteur">Mytteristene / Spar</h3>
+          <article class="role-card" data-faction="saboteur" data-role="saboteur">
+            <h3>Mytterist</h3><p class="role-rank">Spar Ess til 4</p><p>Ser de andre v&aring;kne mytteristene om natten; velg r&oslash;dt eller svart p&aring; oppdrag.</p>
+          </article>
+          <article class="role-card" data-faction="saboteur" data-role="assassin">
+            <h3>Mytterilederen</h3><p class="role-rank">Spar Konge</p><p>Tar den endelige avgj&oslash;relsen om hvem Admiralen er i finalen.</p>
+          </article>
+          <article class="role-card" data-faction="saboteur" data-role="deceiver">
+            <h3>Blindpassasjeren</h3><p class="role-rank">Spar Knekt</p><p>Kjenner de andre v&aring;kne mytteristene, men <strong>viser ikke tommel</strong> til Admiralen.</p>
+          </article>
+          <article class="role-card" data-faction="saboteur" data-role="blind">
+            <h3>Enst&oslash;ingen</h3><p class="role-rank">Spar Dame</p><p>Kjenner ikke de andre mytteristene, men viser tommel til Admiralen.</p>
+          </article>
+          <article class="role-card" data-faction="saboteur" data-role="witch">
+            <h3>Den falske admiralen</h3><p class="role-rank">Spar 5</p><p>Viser tommel sammen med Admiralen n&aring;r Livvakten v&aring;kner.</p>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="reminders-title">
+      <h2 id="reminders-title">Husk ogs&aring;</h2>
+      <ul class="compact-reminders">
+        <li><strong>5 avviste lagforslag</strong> p&aring; rad i samme oppdrag gir mytteristene ett poeng, ikke seier i hele spillet.</li>
+        <li><strong>1 svart kort</strong> feller normalt oppdraget. Med 11 spillere krever <strong>oppdrag 4 to svarte</strong>; null eller ett betyr suksess.</li>
+      </ul>
+      <div id="innsyn" data-feature="inspection">
+        <h3>Innsyn / niv&aring; 3&ndash;4</h3>
+        <p>Etter oppdrag 1, 2 og 3, hvis spillet fortsetter: sjekk bare lagfargen til en annen som aldri har hatt innsynskortet. Fortell hva du s&aring;; mytterister kan lyve. Den sjekkede overtar kortet.</p>
+        <p>Fargen er alltid sann: Blindpassasjeren er svart<span data-feature="lancelot">, V&aring;ghalsen er r&oslash;d</span>. Ikke vis spesialrollen.</p>
+      </div>
+    </section>
+    <div class="actions">
+      <a class="button" href="index.html">Alle spilleregler</a>
+      <a class="button" href="moderator.html#klargjoring">Oppsett &amp; kortliste</a>
+      <button class="button" type="button" data-print hidden>Skriv ut jukselappen</button>
+    </div>
+  </main>
+  <footer class="site-footer"><a href="../../index.html">Kortbordet / alle spill</a><span>Mytteri! / ha jukselappen &aring;pen ved bordet.</span></footer>
+</body>
+</html>

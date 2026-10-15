@@ -1,0 +1,8 @@
+{
+  "name": "card-games",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
