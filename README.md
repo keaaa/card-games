@@ -73,6 +73,9 @@ the player rules and Jukselapp rather than repeated above their content.
 
 The player page teaches the objective, the four-step mission cycle, inspection
 and the ending, with section links near the top on mobile as well as desktop.
+Its compact nautical introduction and numbered mission cards add atmosphere
+without animation, external artwork or changes to the rules. Decorative styling
+is screen-only; the print layout stays plain.
 It explicitly separates the 11-player presets from the 5-20-player reference.
 The moderator guide follows three phases: preparation (including the exact card
 list), first-night script, and daytime checklist with mission sizes and winning

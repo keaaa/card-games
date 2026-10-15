@@ -233,6 +233,29 @@ noscript p { padding: 1rem; background: #f8eedc; }
 .cheatsheet .role-card .role-rank { font-size: .85rem; margin: .1rem 0 .25rem; }
 .cheatsheet .role-card p { font-size: 1rem; }
 .compact-reminders { margin: 0 0 1rem; }
+@media screen {
+  .player-intro { display: grid; grid-template-columns: minmax(0, 1fr) 140px; align-items: center; gap: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius); border: 1px solid var(--navy); background: radial-gradient(ellipse at 100% 100%, #2c6259, transparent 70%), var(--navy); color: var(--surface); }
+  .player-intro .eyebrow { color: var(--gold); font-size: .7rem; margin-bottom: .5rem; }
+  .player-intro h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: .5rem; }
+  .player-hook { font: 1.25rem/1.4 Georgia, serif; }
+  .player-intro .intro-promise { font-size: .9rem; color: #dce8e6; margin-bottom: 0; }
+  .compass-rose { position: relative; justify-self: center; width: 128px; height: 128px; border: 1px solid var(--gold); border-radius: 50%; outline: 1px solid #e7bb7140; outline-offset: 8px; background: linear-gradient(0deg, transparent 49.5%, #e7bb7140 49.5% 50.5%, transparent 50.5%), linear-gradient(90deg, transparent 49.5%, #e7bb7140 49.5% 50.5%, transparent 50.5%); }
+  .compass-rose::before, .compass-rose::after { content: ""; position: absolute; inset: 12px 45px; background: var(--gold); clip-path: polygon(50% 0, 100% 65%, 50% 50%, 0 65%); transform: rotate(25deg); }
+  .compass-rose::after { transform: rotate(205deg); opacity: .5; }
+  .player-scope { margin: .75rem 0 0; }
+  [data-page="player"] .rulebook > div > .section { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  [data-page="player"] .rulebook .eyebrow { margin-bottom: .65rem; }
+  [data-page="player"] .steps { display: grid; gap: .85rem; }
+  [data-page="player"] .steps > li { padding: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); grid-template-columns: 36px minmax(0, 1fr); gap: .75rem; }
+  [data-page="player"] .steps > li::before { border-top: 2px solid var(--gold); padding-top: .35rem; }
+  [data-page="player"] .section-nav a:hover { border-color: var(--teal); background: #e9efea; }
+}
+@media screen and (max-width: 700px) {
+  .player-intro { grid-template-columns: minmax(0, 1fr); padding: 1.1rem; gap: 0; }
+  .compass-rose { display: none; }
+  .player-hook { font-size: 1.1rem; }
+  [data-page="player"] .steps > li { padding: 1rem; grid-template-columns: 28px minmax(0, 1fr); gap: .65rem; }
+}
 @media print {
   @page { margin: 14mm; }
   :root { --line: #aaa; --muted: #333; }

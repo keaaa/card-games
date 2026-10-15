@@ -141,3 +141,15 @@ test("player rules teach before setup and moderator phases follow play order", a
   const night = moderator.match(/<h3>Mytteristene finner hverandre<\/h3><blockquote>([\s\S]*?)<\/blockquote>/)[1];
   assert.ok(night.indexOf("Enst&oslash;ingen skal holde &oslash;ynene lukket") < night.indexOf("&aring;pne &oslash;ynene"));
 });
+
+test("player atmosphere keeps the round structure and essential rules", async () => {
+  const html = await readFile(new URL("../games/mafia/index.html", import.meta.url), "utf8");
+  assert.match(html, /class="guide-heading player-intro"/);
+  assert.match(html, /class="compass-rose" aria-hidden="true"/);
+  const steps = html.match(/<ol class="steps">([\s\S]*?)<\/ol>/)[1];
+  assert.equal([...steps.matchAll(/<li>/g)].length, 4);
+  for (const rule of ["Tommel opp = JA", "Tommel ned = NEI", "Lojale m&aring; spille r&oslash;dt", "minst to svarte kort", "5 avviste lagforslag"]) {
+    assert.ok(steps.includes(rule), `Missing rule: ${rule}`);
+  }
+  assert.match(html, /Ingen ryker ut/);
+});
